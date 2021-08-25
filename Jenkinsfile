@@ -8,6 +8,8 @@ pipeline {
         stage ('Build') {
             steps {
                 sh 'echo STEP'
+                sh 'mvnw package'
+                sh 'java -jar target/*.jar'
             }
         }
 
