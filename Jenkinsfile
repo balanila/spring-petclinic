@@ -8,6 +8,8 @@ pipeline {
         stage ('Build') {
             steps {
                 sh 'echo STEP'
+                sh 'export MAVEN_HOME=/var/jenkins_home/maven/apache-maven-3.6.3'
+                sh 'export PATH=$PATH:$MAVEN_HOME/bin'
                 sh 'mvnw package'
                 sh 'java -jar target/*.jar'
             }
