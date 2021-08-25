@@ -7,7 +7,7 @@ pipeline {
     stages {
         stage ('Build') {
             steps {
-                sh 'echo STEP'
+                sh 'echo "BUILD STEP"'
                 sh 'export MAVEN_HOME=/var/jenkins_home/maven/apache-maven-3.6.3'
                 sh 'export PATH=$PATH:$MAVEN_HOME/bin'
                 sh 'mvn compile war:war'
