@@ -7,8 +7,8 @@ pipeline {
     stages {
       stage{ ("build")
         steps {
-#            sh 'mvnw package'
-#            sh 'java -jar target/*.jar'
+//            sh 'mvnw package'
+//            sh 'java -jar target/*.jar'
             sh 'echo "Stage build'
             }            
         }
