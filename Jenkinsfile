@@ -5,13 +5,11 @@ pipeline {
         jdk 'jdk8'
     }
     stages {
-      stage  ("build")
-        steps {
-//            sh 'mvnw package'
-//            sh 'java -jar target/*.jar'
-            sh 'echo "Stage build'
-            }            
-        
+        stage ('Build') {
+            steps {
+                sh 'echo STEP'
+            }
+        }
+
     }
-    
 }
