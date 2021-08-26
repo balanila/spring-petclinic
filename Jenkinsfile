@@ -22,19 +22,15 @@ pipeline {
         stage ('Upload to jFrog') {
             steps {
                 rtUpload (
-                    
-                    //buildNumber: buildNumber,
-                    serverId: 'default-maven-local',
-                    spec: '''{
+                serverId: 'default-maven-local',
+                spec: '''{
                         "files": [
-                            {
-                             "pattern": "/var/jenkins_home/workspace/spring-petclinic_pipeline/target/spring-petclinic_*",
-                             "target": "default-maven-virtual/",
-
-                            }
-                        ]
-                    }''',
-                )
+                    {
+              "pattern": "/var/jenkins_home/workspace/spring-petclinic_pipeline/target/spring-petclinic_*",
+              "target": "default-maven-virtual/"
+            }
+         ]
+    }''',
             }
         }
 
