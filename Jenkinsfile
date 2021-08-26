@@ -21,7 +21,7 @@ pipeline {
         }
         stage ('Upload to jFrog') {
             steps {
-                rtUploda (
+                rtUpload (
                     
                     //buildNumber: buildNumber,
                     serverId: 'default-maven-local',
