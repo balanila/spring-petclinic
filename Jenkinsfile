@@ -15,8 +15,20 @@ pipeline {
             }
         }
         stage ('SonarQube') {
+            environment {
+                    scannerHome = tool 'SonarQube'
             steps {
                 sh "echo SonarQube Step"
+                withSonarQubeEnv('sonarqube') {
+                    sh "${scannerHome}/bin/sonar-scanner"
+                }
+
+                timeout(time: 10, unit: 'MINUTES') {
+                    timeout(time: 10, unit: 'MINUTES')
+                }
+
+                }
+                
             }
         }
         stage ('Upload to jFrog') {
