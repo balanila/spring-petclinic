@@ -16,7 +16,7 @@ pipeline {
         }
         stage ('SonarQube') {
             steps {
-                sh "Echo SonarQube Step"
+                sh "echo SonarQube Step"
             }
         }
         stage ('Upload to jFrog') {
