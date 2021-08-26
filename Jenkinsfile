@@ -23,17 +23,17 @@ pipeline {
             steps {
                 rtUploda (
                     
-                    buildNumber: buildNumber,
+                    //buildNumber: buildNumber,
                     serverId: 'default-maven-local',
                     spec: '''{
                         "files": [
                             {
                              "pattern": "/var/jenkins_home/workspace/spring-petclinic_pipeline/target/spring-petclinic_*",
                              "target": "default-maven-virtual/",
-                             "recursive": "false"
+
                             }
                         ]
-                    }'''
+                    }''',
                 )
             }
         }
