@@ -24,7 +24,7 @@ pipeline {
                 rtUploda (
                     buildname: JOB_NAME,
                     buildNumber: buildNumber,
-                    serverId: default-maven-local,
+                    serverId: 'default-maven-local',
                     spec: '''{
                         "files": [
                             {
