@@ -26,7 +26,7 @@ pipeline {
                     spec: '''{
                         "files": [
                             {
-                             "pattern": "/var/jenkins_home/workspace/spring-petclinic_pipeline/target/spring-petclinic_*",
+                             "pattern": "/var/jenkins_home/workspace/spring-petclinic_pipeline/target/spring-petclinic-2.4.5.war",
                              "target": "default-maven-virtual/",
 
                             }
